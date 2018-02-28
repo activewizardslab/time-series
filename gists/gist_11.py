@@ -1,0 +1,7 @@
+plt.figure(figsize=(15,7))
+ax = plt.subplot(211)
+sm.graphics.tsa.plot_acf(working_data.Weighted_Price.values.squeeze(), lags=48, ax=ax)
+ax = plt.subplot(212)
+sm.graphics.tsa.plot_pacf(working_data.Weighted_Price.values.squeeze(), lags=48, ax=ax)
+plt.tight_layout()
+plt.show()

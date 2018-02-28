@@ -1,0 +1,1 @@
+s = sm.tsa.seasonal_decompose(working_data.Weighted_Price.values, freq=60)
