@@ -50,7 +50,7 @@ def get_rmse(model, X_test, Y_test, scaler, start_point, working_data, n_train):
     prediction = model.predict(X_test)
     prediction_inverse = scaler.inverse_transform(prediction.reshape(-1, 1))
     Y_test_inverse = scaler.inverse_transform(Y_test.reshape(-1, 1))
-    prediction2_inverse = np.array(prediction_inverse[:,0][1:])
+    prediction2_inverse = np.array(prediction_inverse[:,0][:-1])
     Y_test2_inverse = np.array(Y_test_inverse[:,0])
 
     #calculate RMSE
